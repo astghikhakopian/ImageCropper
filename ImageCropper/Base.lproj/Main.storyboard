@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Cropper View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageCropperViewController" customModule="ImageCropper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGX-wg-cSP">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="9Hs-QK-gQd"/>
+                                    <constraint firstAttribute="width" constant="300" id="b8b-jQ-tjg"/>
+                                </constraints>
+                            </view>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VD4-Xy-F5d">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GQn-HQ-gTi"/>
+                                    <constraint firstAttribute="height" constant="300" id="Tb9-bC-FSv"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KHd-3O-V5D" appends="YES" id="C9l-ZO-41d"/>
+                                    <outletCollection property="gestureRecognizers" destination="VJC-vJ-nIe" appends="YES" id="Tdg-bD-ULj"/>
+                                    <outletCollection property="gestureRecognizers" destination="YRE-bo-39T" appends="YES" id="ouh-dh-ZMB"/>
+                                    <outletCollection property="gestureRecognizers" destination="vHD-18-zU2" appends="YES" id="7rP-8b-wBr"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to select image from your Photo Library" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-A5-b1f">
+                                <rect key="frame" x="37" y="193.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="4Uj-dM-C1g"/>
+                                    <constraint firstAttribute="width" constant="300" id="jir-rR-a8U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aae-B0-BPj">
+                                <rect key="frame" x="0.0" y="622.5" width="375" height="44.5"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBy-1X-awV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aae-B0-BPj" secondAttribute="trailing" id="7p0-Xj-Xbd"/>
+                            <constraint firstItem="zGX-wg-cSP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HBq-Cl-k1g"/>
+                            <constraint firstItem="VD4-Xy-F5d" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KgW-Ot-QI3"/>
+                            <constraint firstItem="aae-B0-BPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lbj-aF-moY"/>
+                            <constraint firstItem="VD4-Xy-F5d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SIL-19-evR"/>
+                            <constraint firstItem="VRK-A5-b1f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XXw-09-ZXy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aae-B0-BPj" secondAttribute="bottom" id="aDm-qZ-Ssc"/>
+                            <constraint firstItem="aae-B0-BPj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:15" id="tNd-wD-GDm"/>
+                            <constraint firstItem="zGX-wg-cSP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v6R-Kt-YUs"/>
+                            <constraint firstItem="VRK-A5-b1f" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wG0-aI-c8c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cropView" destination="zGX-wg-cSP" id="KJ1-4M-yTo"/>
+                        <outlet property="imageView" destination="VD4-Xy-F5d" id="nT5-Wk-06j"/>
+                        <outlet property="selectImageLabel" destination="VRK-A5-b1f" id="eXU-Si-coI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="KHd-3O-V5D">
+                    <connections>
+                        <action selector="zoomImage:" destination="BYZ-38-t0r" id="pHN-HV-lX0"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="VJC-vJ-nIe">
+                    <connections>
+                        <action selector="selectImage:" destination="BYZ-38-t0r" id="iL6-JL-chO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="YRE-bo-39T">
+                    <connections>
+                        <action selector="moveImage:" destination="BYZ-38-t0r" id="Sar-3B-4wx"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="vHD-18-zU2">
+                    <connections>
+                        <action selector="rotateImage:" destination="BYZ-38-t0r" id="RZ7-cU-j75"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
